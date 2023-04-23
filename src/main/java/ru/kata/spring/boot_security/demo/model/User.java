@@ -22,16 +22,6 @@ public class User implements UserDetails {
     private String username;
     @Column
     private String password;
-//    @Column
-//    private String email;
-//
-//    public String getEmail() {
-//        return email;
-//    }
-//
-//    public void setEmail(String email) {
-//        this.email = email;
-//    }
 
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "users_roles",
